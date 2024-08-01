@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		203B93C42C5BCC9E00BCA91E /* CourseDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 203B93C32C5BCC9E00BCA91E /* CourseDetailsView.swift */; };
+		203B93C62C5BCCA800BCA91E /* CourseDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 203B93C52C5BCCA800BCA91E /* CourseDetailsViewModel.swift */; };
+		203B93C82C5BEA2100BCA91E /* CourseImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 203B93C72C5BEA2100BCA91E /* CourseImage.swift */; };
+		203B93CA2C5BED9600BCA91E /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 203B93C92C5BED9600BCA91E /* DataManager.swift */; };
 		207913652C5A99CC009895BD /* MVVMSwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 207913642C5A99CC009895BD /* MVVMSwiftUIApp.swift */; };
 		207913672C5A99CC009895BD /* RowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 207913662C5A99CC009895BD /* RowView.swift */; };
 		207913692C5A99CE009895BD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 207913682C5A99CE009895BD /* Assets.xcassets */; };
@@ -18,6 +22,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		203B93C32C5BCC9E00BCA91E /* CourseDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseDetailsView.swift; sourceTree = "<group>"; };
+		203B93C52C5BCCA800BCA91E /* CourseDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseDetailsViewModel.swift; sourceTree = "<group>"; };
+		203B93C72C5BEA2100BCA91E /* CourseImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseImage.swift; sourceTree = "<group>"; };
+		203B93C92C5BED9600BCA91E /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		207913612C5A99CC009895BD /* MVVMSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MVVMSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		207913642C5A99CC009895BD /* MVVMSwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVVMSwiftUIApp.swift; sourceTree = "<group>"; };
 		207913662C5A99CC009895BD /* RowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RowView.swift; sourceTree = "<group>"; };
@@ -40,6 +48,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		203B93C12C5BCC5C00BCA91E /* CourseListView */ = {
+			isa = PBXGroup;
+			children = (
+				207913662C5A99CC009895BD /* RowView.swift */,
+				207913722C5A9A3F009895BD /* CourseListView.swift */,
+				207913742C5A9C17009895BD /* CourseListViewModel.swift */,
+			);
+			path = CourseListView;
+			sourceTree = "<group>";
+		};
+		203B93C22C5BCC7200BCA91E /* CourseDetails */ = {
+			isa = PBXGroup;
+			children = (
+				203B93C32C5BCC9E00BCA91E /* CourseDetailsView.swift */,
+				203B93C52C5BCCA800BCA91E /* CourseDetailsViewModel.swift */,
+				203B93C72C5BEA2100BCA91E /* CourseImage.swift */,
+			);
+			path = CourseDetails;
+			sourceTree = "<group>";
+		};
 		207913582C5A99CC009895BD = {
 			isa = PBXGroup;
 			children = (
@@ -60,9 +88,8 @@
 			isa = PBXGroup;
 			children = (
 				207913642C5A99CC009895BD /* MVVMSwiftUIApp.swift */,
-				207913662C5A99CC009895BD /* RowView.swift */,
-				207913722C5A9A3F009895BD /* CourseListView.swift */,
-				207913742C5A9C17009895BD /* CourseListViewModel.swift */,
+				203B93C22C5BCC7200BCA91E /* CourseDetails */,
+				203B93C12C5BCC5C00BCA91E /* CourseListView */,
 				2079137F2C5A9D07009895BD /* Models */,
 				2079137E2C5A9D02009895BD /* Services */,
 				207913682C5A99CE009895BD /* Assets.xcassets */,
@@ -83,6 +110,7 @@
 			isa = PBXGroup;
 			children = (
 				207913782C5A9CB7009895BD /* NetworkManager.swift */,
+				203B93C92C5BED9600BCA91E /* DataManager.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -166,9 +194,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				207913792C5A9CB7009895BD /* NetworkManager.swift in Sources */,
+				203B93CA2C5BED9600BCA91E /* DataManager.swift in Sources */,
 				207913732C5A9A3F009895BD /* CourseListView.swift in Sources */,
+				203B93C82C5BEA2100BCA91E /* CourseImage.swift in Sources */,
+				203B93C62C5BCCA800BCA91E /* CourseDetailsViewModel.swift in Sources */,
 				207913752C5A9C17009895BD /* CourseListViewModel.swift in Sources */,
 				207913772C5A9C97009895BD /* Course.swift in Sources */,
+				203B93C42C5BCC9E00BCA91E /* CourseDetailsView.swift in Sources */,
 				207913672C5A99CC009895BD /* RowView.swift in Sources */,
 				207913652C5A99CC009895BD /* MVVMSwiftUIApp.swift in Sources */,
 			);

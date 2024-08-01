@@ -11,17 +11,15 @@ struct CourseListView: View {
     @StateObject private var viewModel = CourseListViewModel()
     var body: some View {
         NavigationStack {
-            ScrollView {
-                ForEach(viewModel.courses, id: \.name) { course in
-                    Text(course.name)
+            List(viewModel.rows, id: \.courseName) { courseDetailsViewModel in
+                NavigationLink(destination: CourseDetailsView(viewModel: courseDetailsViewModel)) {
+                    RowView(viewModel: courseDetailsViewModel)
                 }
             }
             .navigationTitle("Courses")
-            .navigationBarItems(trailing: Button("Fetch Data") {
-                Task {
-                    await viewModel.fetchDataPressed()
-                }
-            })
+        }
+        .task {
+            await viewModel.fetchCourses()
         }
     }
 }

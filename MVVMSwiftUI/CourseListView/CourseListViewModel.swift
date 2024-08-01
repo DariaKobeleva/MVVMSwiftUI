@@ -8,11 +8,12 @@
 import SwiftUI
 
 class CourseListViewModel: ObservableObject {
-    @Published var courses: [Course] = []
+    @Published var rows: [CourseDetailsViewModel] = []
     
-    func fetchDataPressed() async {
+    func fetchCourses() async {
         do {
-            self.courses = try await NetworkManager.shared.fetchCourses()
+            let courses = try await NetworkManager.shared.fetchCourses()
+            rows = courses.map { CourseDetailsViewModel(course: $0)}
         } catch {
             print(error)
         }
